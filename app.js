@@ -11,18 +11,31 @@
 // ReactDOM.render(<GroceryList item1 = {'banana'} item2 = {'apple'}/>, document.getElementById("app"));
 
 
-var Cucumber = (props) => (
-  <li>{props.item}</li>
-)
+// var Cucumber = (props) => (
+//   <li>{props.item}</li>
+// )
 
-var Kale = (props) => (
-  <li>{props.item}</li>
+// var Kale = (props) => (
+//   <li>{props.item}</li>
+// )
+
+// var GroceryList = () => (
+//   <div>
+//     <Cucumber item = "cucumber"/>
+//     <Kale item = "kale"/>
+//   </div>
+// );
+
+var GroceryListItem = (props) => (
+  <ul>
+    <li>{props.groceryItems[0]}</li>
+    <li>{props.groceryItems[1]}</li>
+  </ul>
 )
 
 var GroceryList = () => (
   <div>
-    <Cucumber item = "cucumber"/>
-    <Kale item = "kale"/>
+    <GroceryListItem groceryItems={['bananas', 'apples']}/>
   </div>
 );
 
